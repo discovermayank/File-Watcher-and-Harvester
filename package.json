@@ -1,0 +1,103 @@
+{
+  "name": "filewatcherandharvester",
+  "description": "File watcher and harvester is a nodejs module to watch for changes in files, harvest them and post it to the REST endpoint",
+  "version": "1.0.0",
+  "main": "filewatcherandharvester.js",
+  "author": "Mayank Agarwal <mayank.geek@gmail.com>",
+  "directories": {
+    "lib": "lib",
+    "config": "config"
+  },
+  "engines": {
+    "node": ">= 8.10.0"
+  },
+  "dependencies": {
+    "anymatch": "^3.1.1",
+    "axios": "^0.19.0",
+    "braces": "^3.0.2",
+    "form-data": "^3.0.0",
+    "fsevents": "^2.1.2",
+    "glob-parent": "^5.1.0",
+    "is-binary-path": "^2.1.0",
+    "is-glob": "^4.0.1",
+    "normalize-path": "^3.0.0",
+    "readdirp": "^3.3.0",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.1"
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  },
+  "files": [
+    "filewatcherandharvester.js",
+    "lib/*.js",
+    "config/*.js"
+  ],
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/discovermayank/File-Watcher-and-Harvester.git"
+  },
+  "keywords": [
+    "file watcher",
+    "harvester"
+  ],
+  "license": "",
+  "scripts": {
+    "start": "npm install && node filewatcherandharvester.js",
+    "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "parserOptions": {
+      "ecmaVersion": 9,
+      "sourceType": "script"
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "array-callback-return": "error",
+      "no-empty": [
+        "error",
+        {
+          "allowEmptyCatch": true
+        }
+      ],
+      "no-lonely-if": "error",
+      "no-var": "error",
+      "object-shorthand": "error",
+      "prefer-arrow-callback": [
+        "error",
+        {
+          "allowNamedFunctions": true
+        }
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "ignoreReadBeforeAssign": true
+        }
+      ],
+      "prefer-destructuring": [
+        "error",
+        {
+          "object": true,
+          "array": false
+        }
+      ],
+      "prefer-spread": "error",
+      "prefer-template": "error",
+      "radix": "error",
+      "strict": "error",
+      "quotes": [
+        "error",
+        "single"
+      ]
+    }
+  }
+}
